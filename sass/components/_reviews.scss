@@ -1,0 +1,74 @@
+.review{
+    width:75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-dark, .1);
+    background-color: rgba($color-white, .7);
+    border-radius: 3px;
+    padding: 6rem;
+    font-size:1.5rem;
+    transform: skewX(-12deg);
+
+    @include responsive(tab-port) {
+        width:100%;
+        transform: skewX(0);
+        padding: 4rem 2rem;
+    }
+
+    &:not(:last-child) {
+        margin-bottom:80px;
+    }
+
+    &-icon{
+        width:11rem;
+        height:11rem;
+        float: left;
+        background-color:$color-secondary;
+        border-radius:50%;
+        transform: translateX(-3rem) skewX(12deg);
+        position:relative;
+        overflow:hidden;
+
+        @include responsive(tab-port) {
+            transform: skewX(0);
+            width:8rem;
+            height:8rem;
+            margin-right:15px;
+        }
+
+        &-img{
+            height:100%;
+            transition: all .5s ease;
+            backface-visibility: hidden;
+
+        }
+        .caption{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, 20%);
+            color: $color-white;
+            text-transform:uppercase;
+            font-size:1.6rem;
+            text-align:center;
+            opacity:0;
+            transition: all .5s;
+            backface-visibility: hidden;
+        }
+    }
+    &-text{
+        transform: skewX(12deg);
+
+        @include responsive(tab-port) {
+            transform: skewX(0);
+        }
+    }
+
+    &:hover .caption{
+        opacity:1;
+        transform: translate(-50%, -50%);
+    }
+    &:hover &-icon-img{
+        height:120%;
+        filter: blur(2px) brightness(50%);
+    }
+}

@@ -1,0 +1,42 @@
+.no-display{ display: none; }
+
+.text-center{ text-align: center; }
+
+.margin-b-xl{
+    margin-bottom: 80px;
+
+    @include responsive(tab-port){
+        margin-bottom: 60px;
+    }
+} 
+.margin-b-lg{
+    margin-bottom: 50px;
+
+    @include responsive(tab-port){
+        margin-bottom: 40px;
+    }
+} 
+.margin-b-md{
+    margin-bottom: 30px;
+
+    @include responsive(tab-port){
+        margin-bottom: 20px;
+    } 
+} 
+.margin-b-sm{
+    margin-bottom: 20px;
+
+    @include responsive(tab-port){
+        margin-bottom: 10px;
+    }
+} 
+.margin-b-xs{
+    margin-bottom: 10px;
+
+    @include responsive(tab-port){
+        margin-bottom: 5px;
+    }
+} 
+
+.margin-t-xl{ margin-top: 80px; } 
+.margin-t-lg{ margin-top: 50px; } 
